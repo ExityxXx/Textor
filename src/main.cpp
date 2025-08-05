@@ -44,7 +44,9 @@ int main(void)
     {
         if (file_name_extension == ".cpp")
         {
-            std::string compile_command = "cls & g++ " + file_name + file_name_extension + " -o " + file_name + " & " + file_name;
+            std::string compile_command = "g++ " + file_name + file_name_extension + " -o " + file_name + " & " + file_name;
+            system("cls");
+            std::cout << "Compiling: " << file_name + file_name_extension << "\n\n";
             system(compile_command.c_str());
         }
 
