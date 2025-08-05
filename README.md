@@ -13,14 +13,14 @@ Enter file name extension: .cpp
 ```
 Edit: test.cpp
 
-1 | #include <iostream>
-2 | 
-3 | int main(void) {
-4 |     std::cout << "Hello, World!";
-5 |     return 0;
-6 | }
-7 | 
-8 | :q
+1  #include <iostream>
+2  
+3  int main(void) {
+4      std::cout << "Hello, World!";
+5      return 0;
+6  }
+7  
+8  :q
 ```
 
 ```
