@@ -19,17 +19,22 @@ int main(void)
     (std::cin >> file_name_extension).get();
 
     file.open(file_name + file_name_extension);
-    system("cls");
+    system("cls"); 
 
-    std::cout << "Edit: " << file_name + file_name_extension << "\n\n";
+    std::cout << "  Editing: " << file_name + file_name_extension << "\n\n";
     int i = 1;
-    std::cout << i << " | ";
+    
+    std::cout << "\033[32m";
+    std::cout.width(3);
+    std::cout << i << "  " << "\033[0m";
     
     while (std::getline(std::cin, line))
     {
         if (line == ":q") break;
-        std::cout << ++i << " | ";
         file << line << std::endl;
+        std::cout << "\033[32m";
+        std::cout.width(3);
+        std::cout << ++i << "  " << "\033[0m";
     }
     
     file.close();
